@@ -33,6 +33,7 @@ class Axios extends React.Component {
     componentDidMount(){
         this.getData();
     }
+    
     render() {
         return (
             <div>

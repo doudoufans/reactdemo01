@@ -7,7 +7,6 @@ class FetchJsonp extends React.Component {
         this.state = {  
             list:[]
         };
-
     }
     getData=()=>{
         alert("test")
