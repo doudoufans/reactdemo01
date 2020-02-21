@@ -1,41 +1,36 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
-class News extends React.Component {
+
+class Product extends React.Component {
     constructor(props) {
         super(props);
-        this.state = { 
-            list:[
-                {
-                    aid:1,
-                    title:'我是新闻111'
-                },
-                {
-                    aid:2,
-                    title:'我是新闻222'
-                },
-                {
-                    aid:3,
-                    title:'我是新闻333'
-                }
-            ]
-         };
+        this.state = {  list:[
+            {
+                bid:1,
+                title:'我是商品111'
+            },
+            {
+                bid:2,
+                title:'我是商品222'
+            },
+            {
+                bid:3,
+                title:'我是商品333'
+            }
+        ] };
     }
-    componentDidMount(){
-        console.log(this.state)
-    }
-
     render() {
         return (
             <div>
-                我是新闻组件
+                我是商品组件
                 <ul>
                     {
                         this.state.list.map((value,key)=>{
                         return (<li key={key}>
                             {/* {value.title} */}
                              {/* <Link to="/content">{value.title}</Link> */}
-                             <Link to={`/content/${value.aid}`}>{value.title}</Link>     
+                             <Link to={`/productcontent?bid=${value.bid}`}>{value.title}</Link>     
                             </li>)
                         })
                         
@@ -46,4 +41,4 @@ class News extends React.Component {
     }
 }
 
-export default News;
+export default Product;

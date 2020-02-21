@@ -12,12 +12,7 @@ class Home extends React.Component {
     render() {
         return (
             <div>
-                <br/>
-                <Header  title={this.state.title}/>     
-                <Header></Header>
-                <br/>
-                <hr/>
-                这是首页组件
+               我是Home组件
             </div>
         );
     }
